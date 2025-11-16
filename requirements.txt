@@ -1,2 +1,3 @@
 python-telegram-bot==20.0a6
 ffmpeg-python
+nest_asyncio
