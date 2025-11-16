@@ -3,6 +3,10 @@ from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, Cal
 import ffmpeg
 import os
 
+bot_token = os.getenv("BOT_TOKEN")
+if not bot_token:
+    raise ValueError("BOT_TOKEN environment variable not set")
+
 user_videos = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -63,4 +67,5 @@ if __name__ == "__main__":
     import nest_asyncio
     nest_asyncio.apply()  # allows running nested event loops
     asyncio.get_event_loop().run_until_complete(main())
+
 
