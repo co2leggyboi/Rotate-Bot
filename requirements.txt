@@ -1,5 +1,2 @@
 python-telegram-bot==20.0a6
-moviepy
-imageio
-decorator
-numpy
+ffmpeg-python
